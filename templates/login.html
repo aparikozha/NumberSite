@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %} Login
+{% endblock %}
+{% block content %}
+<h3 align="center"> Please log in to see the interesting fact!</h3> <br>
+    <div align='center'>
+        <form  method="post" style="width: 50%">
+            <input type="text" name='user' placeholder="First name" class="form-control"> <br>
+            <input type="text" name='last' placeholder="Last name" class="form-control"> <br>
+             <br>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

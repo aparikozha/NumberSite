@@ -1,0 +1,20 @@
+{%  extends 'base.html' %}
+ {% block title %} Fact! {%  endblock %}
+
+{% block content %}
+<div align='center' class="form-group">
+
+    <form method="post" style="width:50%; margin-left: 10px">
+
+        <br> <input type="text" name='num' placeholder="The number of your birth (1-31)" class="form-control"> <br>
+        <button class="btn btn-primary">Show!</button> <br>
+        <p>Here is an interesting fact about it:</p>
+        {% with messages=get_flashed_messages(with_categories=True) %}
+        {% for category, msg in messages %}
+            <p class='{{category }}'>{{ msg }}</p>
+        {% endfor %}
+      {% endwith %}
+
+    </form>
+    <img src="{{ url_for('static', filename='img/fact.jpg')}}" width="60%"></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{super()}}
+Home
+{% endblock%}
+{% block content %}
+<h3 align='center'> This is home page</h3>
+<p align='center' class="'text">
+All numbers are magic.<br>
+Each of them is associated with some interesting fact.<br>
+If you want to know an interesting fact related to the number of your birth, join in!</p>
+<div align='center'>
+<img src="{{ url_for('static', filename='img/main.jpg')}}" width="60%">
+</div>
+{% endblock %}
